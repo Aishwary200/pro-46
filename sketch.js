@@ -44,20 +44,20 @@ function detectollision(lbike, lramp) {
   }
 }
 function keyPressed() {
-  if (keyCode === RIGHT_ARROW) {
+  if (keyWentDown === RIGHT_ARROW) {
     bike.body.position.x = bike.body.position.x + 1
     console.log("hi")
   }
-  if (keyCode === LEFT_ARROW) {
+  if (keyWentDown === LEFT_ARROW) {
     bike.body.position.x = bike.body.position.x - 1
   }
-  if (keyCode === UP_ARROW) {
+  if (keyWentDown === UP_ARROW) {
     bike.body.rotate(-10);
   }
-  if (keyCode === DOWN_ARROW) {
+  if (keyWentDown === DOWN_ARROW) {
     bike.body.rotate(10);
   }
-  if (keyCode === 32) {
+  if (keyWentDown === 32 && bike.body.position.y>250) {
     bike.body.position.y = bike.body.position.y - 10
   }
 }
