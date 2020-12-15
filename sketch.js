@@ -39,25 +39,25 @@ function detectollision(lbike, lramp) {
   bikeBodyPosition = lbike.body.position;
   var distance = dist(bikeBodyPosition.x, bikeBodyPosition.y, rampBodyPosition.x, rampBodyPosition.y)
   if (distance <= lbike.radius + lramp.radius && bike.body.position.y>200) {
-    bike.body.position.y = bike.body.position.y - 10
-    bike.body.position.x = bike.body.position.x + 10
+    bike.body.position.y = bike.body.position.y - 1
+    bike.body.position.x = bike.body.position.x + 1
   }
 }
 function keyPressed() {
-  if (keyWentDown === RIGHT_ARROW) {
-    bike.body.position.x = bike.body.position.x + 1
+  if (keyCode === RIGHT_ARROW) {
+    bike.body.position.x = bike.body.position.x + 10
     console.log("hi")
   }
-  if (keyWentDown === LEFT_ARROW) {
-    bike.body.position.x = bike.body.position.x - 1
+  if (keyCode === LEFT_ARROW) {
+    bike.body.position.x = bike.body.position.x - 10
   }
-  if (keyWentDown === UP_ARROW) {
-    bike.body.rotate(-10);
-  }
-  if (keyWentDown === DOWN_ARROW) {
-    bike.body.rotate(10);
-  }
-  if (keyWentDown === 32 && bike.body.position.y>250) {
+  // if (keyCode === UP_ARROW) {
+  //   bike.body.angle(-10);
+  // }
+  // if (keyCode === DOWN_ARROW) {
+  //   bike.body.angle(10);
+  // }
+  if (keyCode === 32 && bike.body.position.y>250) {
     bike.body.position.y = bike.body.position.y - 10
   }
 }
